@@ -1,6 +1,6 @@
-import factory.logistics.Logistics;
-import factory.logistics.impl.RoadLogistics;
-import factory.logistics.impl.SeaLogistics;
+import creational.factory.logistics.Logistics;
+import creational.factory.logistics.impl.RoadLogistics;
+import creational.factory.logistics.impl.SeaLogistics;
 
 public class Main {
 
