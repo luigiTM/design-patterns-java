@@ -1,6 +1,6 @@
 package creational.builder.impl;
 
-import creational.builder.VehicleBuilder;
+import creational.builder.vehicle.builder.VehicleBuilder;
 
 public class MotorcycleBuilder implements VehicleBuilder {
 

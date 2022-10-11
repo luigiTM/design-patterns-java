@@ -1,6 +1,6 @@
-package creational.prototype.impl;
+package creational.prototype.shape.impl;
 
-import creational.prototype.Shape;
+import creational.prototype.shape.Shape;
 
 public class Circle extends Shape {
 
