@@ -17,7 +17,7 @@ repositories {
 group = 'groupId'
 version = '1.0-SNAPSHOT'
 description = 'design-patterns-java'
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.sourceCompatibility = JavaVersion.VERSION_1_7
 
 publishing {
     publications {
