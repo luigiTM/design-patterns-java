@@ -1,4 +1,4 @@
 package structural.decorator;
 
-public class decoratorMain {
+public class DecoratorMain {
 }
