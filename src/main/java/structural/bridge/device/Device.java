@@ -8,12 +8,14 @@ public interface Device {
 
     void disable();
 
-    byte getVolume();
+    int getVolume();
 
-    void setVolume(byte percent);
+    void setVolume(int percent);
 
-    byte getChannel();
+    int getChannel();
 
-    void setChannel(byte channel);
+    void setChannel(int channel);
+
+    void printStatus();
 
 }

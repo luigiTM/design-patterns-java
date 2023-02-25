@@ -3,46 +3,59 @@ package structural.bridge.device.impl;
 import structural.bridge.device.Device;
 
 public class Radio implements Device {
-
-    private boolean enabled = false;
-
-    private byte volume = 0;
-
-    private byte channel = 0;
+    private boolean on = false;
+    private int volume = 30;
+    private int channel = 1;
 
     @Override
     public boolean isEnabled() {
-        return enabled;
+        return on;
     }
 
     @Override
     public void enable() {
-        enabled = true;
+        on = true;
     }
 
     @Override
     public void disable() {
-        enabled = false;
+        on = false;
     }
 
     @Override
-    public byte getVolume() {
+    public int getVolume() {
         return volume;
     }
 
     @Override
-    public void setVolume(byte percent) {
-        this.volume = percent;
+    public void setVolume(int volume) {
+        if (volume > 100) {
+            this.volume = 100;
+        } else if (volume < 0) {
+            this.volume = 0;
+        } else {
+            this.volume = volume;
+        }
     }
 
     @Override
-    public byte getChannel() {
+    public int getChannel() {
         return channel;
     }
 
     @Override
-    public void setChannel(byte channel) {
+    public void setChannel(int channel) {
         this.channel = channel;
+    }
+
+    @Override
+    public void printStatus() {
+        System.out.println("------------------------------------");
+        System.out.println("| I'm radio.");
+        System.out.println("| I'm " + (on ? "enabled" : "disabled"));
+        System.out.println("| Current volume is " + volume + "%");
+        System.out.println("| Current channel is " + channel);
+        System.out.println("------------------------------------\n");
     }
 
 }

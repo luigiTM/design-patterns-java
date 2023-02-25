@@ -9,19 +9,24 @@ public class AdapterMain {
 
     public static void main(String[] args){
 
-        RoundHole roundHole = new RoundHole(5);
-        RoundPeg roundPeg = new RoundPeg(5);
+        RoundHole hole = new RoundHole(5);
+        RoundPeg rpeg = new RoundPeg(5);
+        if (hole.fits(rpeg)) {
+            System.out.println("Round peg r5 fits round hole r5.");
+        }
 
-        roundHole.fits(roundPeg);
+        SquarePeg smallSqPeg = new SquarePeg(2);
+        SquarePeg largeSqPeg = new SquarePeg(20);
 
-        SquarePeg smallSquarePeg = new SquarePeg(5);
-        SquarePeg largeSquarePeg = new SquarePeg(10);
-
-        SquarePegAdapter smallSquarePegAdapter = new SquarePegAdapter(smallSquarePeg);
-        SquarePegAdapter largeSquarePegAdapter = new SquarePegAdapter(largeSquarePeg);
-
-        roundHole.fits(smallSquarePegAdapter);
-        roundHole.fits(largeSquarePegAdapter);
+        // Adapter solves the problem.
+        SquarePegAdapter smallSqPegAdapter = new SquarePegAdapter(smallSqPeg);
+        SquarePegAdapter largeSqPegAdapter = new SquarePegAdapter(largeSqPeg);
+        if (hole.fits(smallSqPegAdapter)) {
+            System.out.println("Square peg w2 fits round hole r5.");
+        }
+        if (!hole.fits(largeSqPegAdapter)) {
+            System.out.println("Square peg w20 does not fit into round hole r5.");
+        }
 
     }
 

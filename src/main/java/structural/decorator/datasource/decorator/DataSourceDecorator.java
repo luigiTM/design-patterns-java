@@ -1,12 +1,12 @@
 package structural.decorator.datasource.decorator;
 
-import structural.decorator.datasource.Datasource;
+import structural.decorator.datasource.DataSource;
 
-public class DatasourceDecorator implements Datasource {
+public class DataSourceDecorator implements DataSource {
 
-    protected Datasource wrappee;
+    private DataSource wrappee;
 
-    public DatasourceDecorator(Datasource source) {
+    DataSourceDecorator(DataSource source) {
         this.wrappee = source;
     }
 

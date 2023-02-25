@@ -1,6 +1,6 @@
 package structural.decorator.datasource;
 
-public interface Datasource {
+public interface DataSource {
 
     public void writeData(String data);
 
