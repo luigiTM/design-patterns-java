@@ -16,3 +16,21 @@ Os seguintes padrões de projetos estão implementados:
 
 * Adapter
 * Bridge
+* Composite
+* Decorator
+* Facade
+* Flyweight
+* Proxy
+
+### Padrões comportamentais
+
+* Chain of Responsability
+* Command
+* Iterator
+* Mediator
+* Memento
+* Observer
+* State
+* Strategy
+* Template Method
+* Visitor
